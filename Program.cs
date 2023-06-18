@@ -2,7 +2,8 @@
 string[] arrStr2 = {"1234", "1567", "-2", "computer science"};
 string[] arrStr3 = {"Russia", "Denmark", "Kazan"};
 
-string[] newStrArr1 = getStrArr(arrStr1, 3);
+string[] newStrArr1 = getStrArr(arrStr2, 3);
+showArr(newStrArr1);
 
 string[] getStrArr(string[] originArr, int targetStrLength){
     
@@ -23,5 +24,14 @@ string[] getStrArr(string[] originArr, int targetStrLength){
         newArr[i] = tempArr[i];
     }
     return newArr;
-    
+}
+
+void showArr(string[] arr){
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if(i==0) Console.Write($"\"{arr[i]}\"");
+        else Console.Write($",\"{arr[i]}\"");
+    }
+    Console.WriteLine("]");
 }
